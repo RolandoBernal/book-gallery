@@ -8,9 +8,13 @@ namespace BookGallery.Controllers
 {
     public class BooksController : Controller
     {
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "Hello from the books controller";
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Friday)
+            {
+                return Redirect("/");
+            }
+            return Content("Hello from the books controller");
         }
     }
 }
