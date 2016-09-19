@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace BookGallery.Controllers
 {
-    public class BooksController : Controller
+    public class BookController : Controller
     {
         public ActionResult Detail()
         {
