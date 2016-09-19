@@ -1,7 +1,21 @@
-﻿
+﻿@model BookGallery.Models.Book[]
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Books";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    @foreach (var book in Model)
+    {
+        <div class="col-md-3">
+            <h4>@book.DisplayText</h4>
+            <img src="/Images/@book.CoverImageFileName"
+                 alt="@book.DisplayText"
+                 class="img-responsive" />
+        </div>
+    }
+</div>
+
 
