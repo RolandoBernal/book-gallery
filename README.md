@@ -1,2 +1,3 @@
 # book-gallery
-ASP.NET MVC project refresher. Project to store information about books I have read. 
+This is an ASP.NET MVC project. 
+The objective ot this Project is to store information about books I have read. 
