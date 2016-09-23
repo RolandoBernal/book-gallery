@@ -8,7 +8,7 @@ namespace BookGallery.Models
     public class Book
     {
         public int Id { get; set; }
-        public string SeriesTitle { get; set; }
+        public Series Series { get; set; }
         public int IssueNumber { get; set; }
         public string DescriptionHtml { get; set; }
         public Artist[] Artists { get; set; }
@@ -18,7 +18,15 @@ namespace BookGallery.Models
         {
             get
             {
-                return SeriesTitle + " #" + IssueNumber;
+                var series = Series;
+                if (series != null)
+                {
+                    return Series.Title + " #" + IssueNumber;
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
 
@@ -27,7 +35,7 @@ namespace BookGallery.Models
         {
             get
             {
-                return SeriesTitle.Replace(" ", "-").ToLower() + "-" + IssueNumber + ".jpg";
+                return Series.Title.Replace(" ", "-").ToLower() + "-" + IssueNumber + ".jpg";
             }
         }
     }
