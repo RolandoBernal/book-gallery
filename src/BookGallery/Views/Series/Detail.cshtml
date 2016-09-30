@@ -1,0 +1,28 @@
+﻿@model BookGallery.Models.Series
+
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.ShowBackBar = true;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="well">
+    <h5>Description</h5>
+    <div>
+        @Html.Raw(Model.DescriptionHtml)
+    </div>
+</div>
+
+<div class="row">
+    @foreach (var book in Model.Issues)
+            {
+        <div class="col-md-3">
+            <h4>@Html.ActionLink(book.DisplayText, "Detail", "Books", new { id = book.Id }, null)</h4>
+            <a href="@Url.Action("Detail", "Books", new { id = book.Id })">
+                <img src="~/Images/@book.CoverImageFileName" class="img-responsive" alt="@book.DisplayText" />
+            </a>
+        </div>
+    }
+</div>
+
