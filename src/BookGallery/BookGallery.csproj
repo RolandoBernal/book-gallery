@@ -107,6 +107,7 @@
     <Content Include="Views\Books\Index.cshtml" />
     <Content Include="Views\Series\Index.cshtml" />
     <Content Include="Views\Series\Detail.cshtml" />
+    <Content Include="Views\Shared\_BooksList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
