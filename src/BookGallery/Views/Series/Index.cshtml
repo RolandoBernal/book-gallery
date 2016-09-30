@@ -1,0 +1,20 @@
+﻿@model BookGallery.Models.Series[]
+
+@{
+    ViewBag.Title = "Series";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="series-list">
+            @foreach (var series in Model)
+            {
+                <li>
+                    <h4>@Html.ActionLink(@series.Title, "Detail", new { id = series.Id })</h4>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

@@ -105,10 +105,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
+    <Content Include="Views\Series\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\SeriesController.cs" />
     <Compile Include="Data\BookRepository.cs" />
     <Compile Include="Data\Data.cs" />
     <Compile Include="Data\SeriesRepository.cs" />
